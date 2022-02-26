@@ -10,4 +10,33 @@ package ejerciciorelaciones;
  */
 public class CuentaBancaria {
     
+    private String clave;
+    private float monto;
+
+    public CuentaBancaria(String clave, float monto) {
+        this.clave = clave;
+        this.monto = monto;
+    }
+
+    public String getClave() {
+        return clave;
+    }
+
+    public void setClave(String clave) {
+        this.clave = clave;
+    }
+
+    public float getMonto() {
+        return monto;
+    }
+
+    public void setMonto(float monto) {
+        this.monto = monto;
+    }
+
+    @Override
+    public String toString() {
+        return "Cuenta Bancaria{ " + "Clave: " + clave + ", Monto: " + monto + " }";
+    }        
+    
 }
