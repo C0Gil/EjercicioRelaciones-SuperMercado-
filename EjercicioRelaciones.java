@@ -4,6 +4,8 @@
  */
 package ejerciciorelaciones;
 
+import java.util.Scanner;
+
 /**
  *
  * @author gilbe
@@ -14,7 +16,89 @@ public class EjercicioRelaciones {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        
+        Provedor Provedor1 = new Provedor("Provedor de Alimentos", "Pachuca", "COOO123456789123", "Sucursal Norte, Ciudad De Mexico Sur");
+        Sucursal Pachuca_Norte = new Sucursal("Sucursal Norte", "Pachuca", 20, "125343", 12000.0f, Provedor1);
+        Provedor Provedor2 = new Provedor("Provedor de Consumibles", "Pachuca", "QUUU123456789123", "Sucursal Sur");
+        Sucursal Pachuca_Sur = new Sucursal("Sucursal Sur", "Pachuca", 18, "323468", 15000.0f, Provedor2);
+        Provedor Provedor3 = new Provedor("Provedor de Productos Higienicos", "Pachuca", "APAA123456789123", "Sucursal Pricipal");
+        Sucursal Pachuca_Centro = new Sucursal("Sucursal Centro", "Pachuca", 25, "456852", 20000.0f, Provedor3);
+        
+        int caso = 0;
+        
+        Scanner leerInt = new Scanner(System.in);
+        
+        do{
+            
+            System.out.println("+--------------------------------------------------------------------------------+");
+            System.out.println("    MENU");
+            System.out.println("|--------------------------------------------------------------------------------|");
+            System.out.println("        (1) Ver Sucursales");
+            System.out.println("        (2) Editar Informacion De Las Sucursales");
+            System.out.println("        (3) SALIR");
+            System.out.println("|--------------------------------------------------------------------------------|");
+            System.out.println("    ELIGE UNA OPCION");
+            System.out.println("+--------------------------------------------------------------------------------+");
+            
+            caso = leerInt.nextInt();
+            
+            switch(caso){                
+                case 1: {
+                    do{
+                        
+                        System.out.println("+--------------------------------------------------------------------------------+");
+                        System.out.println("    MENU");
+                        System.out.println("|--------------------------------------------------------------------------------|");
+                        System.out.println("        (1) "+Pachuca_Norte.getNombre());
+                        System.out.println("        (2) "+Pachuca_Centro.getNombre());
+                        System.out.println("        (3) "+Pachuca_Sur.getNombre());
+                        System.out.println("        (4) SALIR");
+                        System.out.println("|--------------------------------------------------------------------------------|");
+                        System.out.println("    ELIGE UNA OPCION");
+                        System.out.println("+--------------------------------------------------------------------------------+");
+                        
+                        caso = leerInt.nextInt();
+                        
+                        switch (caso) {
+                            case 1:{
+                                break;                                
+                            } 
+                            case 2:{
+                                break;
+                            }         
+                            case 3:{
+                                break;
+                            }         
+                            case 4:{
+                                break;
+                            }
+                            default:{
+                                
+                            }
+                        }
+                        
+                    }while(caso != 4);
+                    break;
+                }
+                case 2:{
+                    
+                    break;
+                }
+                case 3:{
+                    System.out.println("+--------------------------------------------------------------------------------+");
+                    System.out.println("    ADIOS :D");
+                    System.out.println("+--------------------------------------------------------------------------------+");
+                    break;
+                }
+                default:{                    
+                    System.out.println("+--------------------------------------------------------------------------------+");
+                    System.out.println("    OPCION INVALIDA D:");                        
+                    System.out.println("+--------------------------------------------------------------------------------+");    
+                }                                              
+            }
+            
+        }while(caso != 3);        
+        
     }
     
 }
