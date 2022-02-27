@@ -36,7 +36,7 @@ public class CuentaBancaria {
 
     @Override
     public String toString() {
-        return "Cuenta Bancaria{ " + "Clave: " + clave + ", Monto: " + monto + " }";
+        return "{ " + "Clave: " + clave + ", Monto: " + monto + " }";
     }        
     
 }

@@ -16,7 +16,7 @@ public class Sucursal {
     private CuentaBancaria cuenta;
     private Provedor provedores;
 
-    public Sucursal(String nombre, String direccion, int numeroEmpleados, CuentaBancaria cuenta, Provedor provedores, String clave, float monto) {
+    public Sucursal(String nombre, String direccion, int numeroEmpleados, String clave, float monto, Provedor provedores) {
         this.nombre = nombre;
         this.direccion = direccion;
         this.numeroEmpleados = numeroEmpleados;
@@ -66,7 +66,7 @@ public class Sucursal {
 
     @Override
     public String toString() {
-        return "Sucursal{ " + "Nombre: " + nombre + ", Direccion: " + direccion + ", Numero de empleados: " + numeroEmpleados + ", Cuenta: " + cuenta + ", Provedores:" + provedores + " }";
+        return "Sucursal{ " + "Nombre: " + nombre + ", Direccion: " + direccion + ", Numero de empleados: " + numeroEmpleados + ", Cuenta: " + cuenta + ", Provedor principal:" + provedores + " }";
     }        
     
 }

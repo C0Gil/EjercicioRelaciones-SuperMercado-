@@ -56,7 +56,7 @@ public class Provedor {
 
     @Override
     public String toString() {
-        return "Provedor{ " + "Razon social: " + razonSocial + ", Direccion fiscal: " + direccionFiscal + ", RFC: " + rfc + ", Cadenasa las que Distribuye: " + cadenas + " }";
+        return "Provedor{ " + "Razon social: " + razonSocial + ", Direccion fiscal: " + direccionFiscal + ", RFC: " + rfc + ", Cadenas a las que Distribuye: " + cadenas + " }";
     }        
     
 }
