@@ -17,12 +17,13 @@ public class EjercicioRelaciones {
      */
     public static void main(String[] args) {
         
-        Provedor Provedor1 = new Provedor("Provedor de Alimentos", "Pachuca", "COOO123456789123", "Sucursal Norte, Ciudad De Mexico Sur");
-        Sucursal Pachuca_Norte = new Sucursal("Sucursal Norte", "Pachuca", 20, "125343", 12000.0f, Provedor1);
-        Provedor Provedor2 = new Provedor("Provedor de Consumibles", "Pachuca", "QUUU123456789123", "Sucursal Sur");
-        Sucursal Pachuca_Sur = new Sucursal("Sucursal Sur", "Pachuca", 18, "323468", 15000.0f, Provedor2);
-        Provedor Provedor3 = new Provedor("Provedor de Productos Higienicos", "Pachuca", "APAA123456789123", "Sucursal Pricipal");
-        Sucursal Pachuca_Centro = new Sucursal("Sucursal Centro", "Pachuca", 25, "456852", 20000.0f, Provedor3);
+        Provedor Provedor1 = new Provedor("Provedor de Alimentos", "Pachuca", "COOO123456789123", "Sucursal Norte, Sucursal Pricipal ,Sucursal Sur");
+        Provedor Provedor2 = new Provedor("Provedor de Consumibles", "Pachuca", "QUUU123456789123", "Sucursal Sur, Sucursal Pricipal, Sucursal Norte");
+        Provedor Provedor3 = new Provedor("Provedor de Productos Higienicos", "Pachuca", "APAA123456789123", "Sucursal Pricipal, Sucursal Norte, Sucursal Sur");
+        
+        Sucursal Pachuca_Norte = new Sucursal("Sucursal Norte", "Pachuca", 20, "125343", 12000.0f, Provedor1, Provedor2, Provedor3);
+        Sucursal Pachuca_Sur = new Sucursal("Sucursal Sur", "Pachuca", 18, "323468", 15000.0f, Provedor1, Provedor2, Provedor3);        
+        Sucursal Pachuca_Centro = new Sucursal("Sucursal Centro", "Pachuca", 25, "456852", 20000.0f, Provedor1, Provedor2, Provedor3);
         
         int caso;        
         String clave;      
@@ -75,10 +76,16 @@ public class EjercicioRelaciones {
                                 System.out.println("        Direccion: " + Pachuca_Norte.getDireccion());
                                 System.out.println("        Numero De empleados: " + Pachuca_Norte.getNumeroEmpleados());
                                 System.out.println("        Cuenta: " + Pachuca_Norte.getCuenta());
-                                System.out.println("        Provedores: " + Provedor1.getRazonSocial());
+                                System.out.println("        Provedor 1: " + Provedor1.getRazonSocial());
                                 System.out.println("                    " + Provedor1.getDireccionFiscal());
                                 System.out.println("                    " + Provedor1.getRfc());
                                 System.out.println("                    " + Provedor1.getCadenas());
+                                System.out.println("        Provedor 2: " + Provedor2.getRazonSocial());
+                                System.out.println("                    " + Provedor2.getDireccionFiscal());
+                                System.out.println("                    " + Provedor2.getRfc());  
+                                System.out.println("        Provedor 3: " + Provedor3.getRazonSocial());
+                                System.out.println("                    " + Provedor3.getDireccionFiscal());
+                                System.out.println("                    " + Provedor3.getRfc());
                                 System.out.println("+--------------------------------------------------------------------------------+");
                                 break;                                
                             } 
@@ -89,9 +96,16 @@ public class EjercicioRelaciones {
                                 System.out.println("        Direccion: " + Pachuca_Centro.getDireccion());
                                 System.out.println("        Numero De empleados: " + Pachuca_Centro.getNumeroEmpleados());
                                 System.out.println("        Cuenta: " + Pachuca_Centro.getCuenta());
-                                System.out.println("        Provedores: " + Provedor3.getRazonSocial());
+                                System.out.println("        Provedor 1: " + Provedor1.getRazonSocial());
+                                System.out.println("                    " + Provedor1.getDireccionFiscal());
+                                System.out.println("                    " + Provedor1.getRfc());
+                                System.out.println("                    " + Provedor1.getCadenas());
+                                System.out.println("        Provedor 2: " + Provedor2.getRazonSocial());
+                                System.out.println("                    " + Provedor2.getDireccionFiscal());
+                                System.out.println("                    " + Provedor2.getRfc());  
+                                System.out.println("        Provedor 3: " + Provedor3.getRazonSocial());
                                 System.out.println("                    " + Provedor3.getDireccionFiscal());
-                                System.out.println("                    " + Provedor3.getRfc());                                
+                                System.out.println("                    " + Provedor3.getRfc());                               
                                 System.out.println("+--------------------------------------------------------------------------------+");                                
                                 break;
                             }         
@@ -102,9 +116,16 @@ public class EjercicioRelaciones {
                                 System.out.println("        Direccion: " + Pachuca_Sur.getDireccion());
                                 System.out.println("        Numero De empleados: " + Pachuca_Sur.getNumeroEmpleados());
                                 System.out.println("        Cuenta: " + Pachuca_Sur.getCuenta());
-                                System.out.println("        Provedores: " + Provedor2.getRazonSocial());
+                                System.out.println("        Provedor 1: " + Provedor1.getRazonSocial());
+                                System.out.println("                    " + Provedor1.getDireccionFiscal());
+                                System.out.println("                    " + Provedor1.getRfc());
+                                System.out.println("                    " + Provedor1.getCadenas());
+                                System.out.println("        Provedor 2: " + Provedor2.getRazonSocial());
                                 System.out.println("                    " + Provedor2.getDireccionFiscal());
-                                System.out.println("                    " + Provedor2.getRfc());                                
+                                System.out.println("                    " + Provedor2.getRfc());  
+                                System.out.println("        Provedor 3: " + Provedor3.getRazonSocial());
+                                System.out.println("                    " + Provedor3.getDireccionFiscal());
+                                System.out.println("                    " + Provedor3.getRfc());                                
                                 System.out.println("+--------------------------------------------------------------------------------+");
                                 break;
                             }         
@@ -429,9 +450,9 @@ public class EjercicioRelaciones {
                         System.out.println("+--------------------------------------------------------------------------------+");
                         System.out.println("    SUBMENU ----> Ver Informacion De Los Provedores");
                         System.out.println("|--------------------------------------------------------------------------------|");
-                        System.out.println("        (1) Provedor de " + Pachuca_Norte.getNombre());
-                        System.out.println("        (2) Provedor de " + Pachuca_Centro.getNombre());
-                        System.out.println("        (3) Provedor de " + Pachuca_Sur.getNombre());
+                        System.out.println("        (1) Provedores de " + Pachuca_Norte.getNombre());
+                        System.out.println("        (2) Provedores de " + Pachuca_Centro.getNombre());
+                        System.out.println("        (3) Provedores de " + Pachuca_Sur.getNombre());
                         System.out.println("        (4) SALIR");
                         System.out.println("|--------------------------------------------------------------------------------|");
                         System.out.println("    ELIGE UNA OPCION");
@@ -442,19 +463,23 @@ public class EjercicioRelaciones {
                         switch(caso){
                             case 1:{
                                 System.out.println("+--------------------------------------------------------------------------------+");                    
-                                System.out.println("        Es provedor de: " + Pachuca_Norte.getNombre());                                
+                                System.out.println("        Es provedor 1 de: " + Pachuca_Norte.getNombre());                                
                                 System.out.println("|--------------------------------------------------------------------------------|");
                                 System.out.println("        Razon social: " + Provedor1.getRazonSocial());
                                 System.out.println("        Direccion Social: " + Provedor1.getDireccionFiscal());
                                 System.out.println("        RFC: " + Provedor1.getRfc());
                                 System.out.println("        Cadenas de las que es provedor: ");
-                                System.out.println("        " + Provedor1.getCadenas());
-                                System.out.println("+--------------------------------------------------------------------------------+");
-                                break;
-                            }
-                            case 2:{
+                                System.out.println("        " + Provedor1.getCadenas());                                
                                 System.out.println("+--------------------------------------------------------------------------------+");                    
-                                System.out.println("        Es provedor de: " + Pachuca_Centro.getNombre());                                
+                                System.out.println("        Es provedor 2 de: " + Pachuca_Norte.getNombre());                                
+                                System.out.println("|--------------------------------------------------------------------------------|");
+                                System.out.println("        Razon social: " + Provedor2.getRazonSocial());
+                                System.out.println("        Direccion Social: " + Provedor2.getDireccionFiscal());
+                                System.out.println("        RFC: " + Provedor2.getRfc());
+                                System.out.println("        Cadenas de las que es provedor: ");
+                                System.out.println("        " + Provedor2.getCadenas());
+                                System.out.println("+--------------------------------------------------------------------------------+");
+                                System.out.println("        Es provedor 3 de: " + Pachuca_Norte.getNombre());                                
                                 System.out.println("|--------------------------------------------------------------------------------|");
                                 System.out.println("        Razon social: " + Provedor3.getRazonSocial());
                                 System.out.println("        Direccion Social: " + Provedor3.getDireccionFiscal());
@@ -464,15 +489,59 @@ public class EjercicioRelaciones {
                                 System.out.println("+--------------------------------------------------------------------------------+");
                                 break;
                             }
-                            case 3:{
+                            case 2:{
                                 System.out.println("+--------------------------------------------------------------------------------+");                    
-                                System.out.println("        Es provedor de: " + Pachuca_Sur.getNombre());                                
+                                System.out.println("        Es provedor 1 de: " + Pachuca_Centro.getNombre());                                
+                                System.out.println("|--------------------------------------------------------------------------------|");
+                                System.out.println("        Razon social: " + Provedor1.getRazonSocial());
+                                System.out.println("        Direccion Social: " + Provedor1.getDireccionFiscal());
+                                System.out.println("        RFC: " + Provedor1.getRfc());
+                                System.out.println("        Cadenas de las que es provedor: ");
+                                System.out.println("        " + Provedor1.getCadenas());                                
+                                System.out.println("+--------------------------------------------------------------------------------+");                    
+                                System.out.println("        Es provedor 2 de: " + Pachuca_Centro.getNombre());                                
                                 System.out.println("|--------------------------------------------------------------------------------|");
                                 System.out.println("        Razon social: " + Provedor2.getRazonSocial());
                                 System.out.println("        Direccion Social: " + Provedor2.getDireccionFiscal());
                                 System.out.println("        RFC: " + Provedor2.getRfc());
                                 System.out.println("        Cadenas de las que es provedor: ");
                                 System.out.println("        " + Provedor2.getCadenas());
+                                System.out.println("+--------------------------------------------------------------------------------+");
+                                System.out.println("        Es provedor 3 de: " + Pachuca_Centro.getNombre());                                
+                                System.out.println("|--------------------------------------------------------------------------------|");
+                                System.out.println("        Razon social: " + Provedor3.getRazonSocial());
+                                System.out.println("        Direccion Social: " + Provedor3.getDireccionFiscal());
+                                System.out.println("        RFC: " + Provedor3.getRfc());
+                                System.out.println("        Cadenas de las que es provedor: ");
+                                System.out.println("        " + Provedor3.getCadenas());
+                                System.out.println("+--------------------------------------------------------------------------------+");
+                                break;
+                            }
+                            case 3:{                            
+                                System.out.println("+--------------------------------------------------------------------------------+");                    
+                                System.out.println("        Es provedor 1 de: " + Pachuca_Sur.getNombre());                                
+                                System.out.println("|--------------------------------------------------------------------------------|");
+                                System.out.println("        Razon social: " + Provedor1.getRazonSocial());
+                                System.out.println("        Direccion Social: " + Provedor1.getDireccionFiscal());
+                                System.out.println("        RFC: " + Provedor1.getRfc());
+                                System.out.println("        Cadenas de las que es provedor: ");
+                                System.out.println("        " + Provedor1.getCadenas());                                
+                                System.out.println("+--------------------------------------------------------------------------------+");                    
+                                System.out.println("        Es provedor 2 de: " + Pachuca_Sur.getNombre());                                
+                                System.out.println("|--------------------------------------------------------------------------------|");
+                                System.out.println("        Razon social: " + Provedor2.getRazonSocial());
+                                System.out.println("        Direccion Social: " + Provedor2.getDireccionFiscal());
+                                System.out.println("        RFC: " + Provedor2.getRfc());
+                                System.out.println("        Cadenas de las que es provedor: ");
+                                System.out.println("        " + Provedor2.getCadenas());
+                                System.out.println("+--------------------------------------------------------------------------------+");
+                                System.out.println("        Es provedor 3 de: " + Pachuca_Sur.getNombre());                                
+                                System.out.println("|--------------------------------------------------------------------------------|");
+                                System.out.println("        Razon social: " + Provedor3.getRazonSocial());
+                                System.out.println("        Direccion Social: " + Provedor3.getDireccionFiscal());
+                                System.out.println("        RFC: " + Provedor3.getRfc());
+                                System.out.println("        Cadenas de las que es provedor: ");
+                                System.out.println("        " + Provedor3.getCadenas());
                                 System.out.println("+--------------------------------------------------------------------------------+");
                                 break;
                             }
@@ -495,11 +564,11 @@ public class EjercicioRelaciones {
                 case 6:{
                     do{
                         System.out.println("+--------------------------------------------------------------------------------+");
-                        System.out.println("    SUBMENU ----> Ver Informacion De Los Provedores");
+                        System.out.println("    SUBMENU ----> Editar Informacion De Los Provedores");
                         System.out.println("|--------------------------------------------------------------------------------|");
-                        System.out.println("        (1) Provedor de " + Pachuca_Norte.getNombre());
-                        System.out.println("        (2) Provedor de " + Pachuca_Centro.getNombre());
-                        System.out.println("        (3) Provedor de " + Pachuca_Sur.getNombre());
+                        System.out.println("        (1) Provedores de " + Pachuca_Norte.getNombre());
+                        System.out.println("        (2) Provedores de " + Pachuca_Centro.getNombre());
+                        System.out.println("        (3) Provedores de " + Pachuca_Sur.getNombre());
                         System.out.println("        (4) SALIR");
                         System.out.println("|--------------------------------------------------------------------------------|");
                         System.out.println("    ELIGE UNA OPCION");
@@ -509,51 +578,240 @@ public class EjercicioRelaciones {
                         
                         switch(caso){
                             case 1:{
-                                System.out.println("+--------------------------------------------------------------------------------+");                                    
-                                System.out.println("    Datos de  Provedor de Sucursal: " + Pachuca_Norte.getNombre());                                    
-                                System.out.println("|--------------------------------------------------------------------------------|");                                
-                                System.out.print("        Introduce la nueva razon social: ");                                
-                                Provedor1.setRazonSocial(leerString.nextLine());                                
-                                System.out.print("        Introduce la nueva direccion fiscal: ");                                
-                                Provedor1.setDireccionFiscal(leerString.nextLine());                                
-                                System.out.print("        Introduce el nuevo RFC: ");                                      
-                                Provedor1.setRfc(leerString.nextLine());                                
-                                System.out.println("        Introduce la nueva informacion sobre las cadenas:");
-                                System.out.println("        ");
-                                Provedor1.setCadenas(leerString.nextLine());
+                                do{
                                 System.out.println("+--------------------------------------------------------------------------------+");
+                                System.out.println("    SUBMENU ----> Editar Informacion De Los Provedores ---> Sucursal: "+ Pachuca_Norte.getNombre());
+                                System.out.println("|--------------------------------------------------------------------------------|");
+                                System.out.println("    (1) Provedor 1");
+                                System.out.println("    (1) Provedor 2");
+                                System.out.println("    (1) Provedor 3");
+                                System.out.println("|--------------------------------------------------------------------------------|");
+                                System.out.println("    ELIGE UNA OPCION");
+                                System.out.println("+--------------------------------------------------------------------------------+");
+                                
+                                caso = leerInt.nextInt();
+                                
+                                switch(caso){
+                                    case 1:{
+                                        System.out.println("+--------------------------------------------------------------------------------+");
+                                        System.out.println("    Datos de  Provedor 1 de Sucursal: " + Pachuca_Norte.getNombre());                                    
+                                        System.out.println("|--------------------------------------------------------------------------------|");                                
+                                        System.out.print("        Introduce la nueva razon social: ");                                
+                                        Provedor1.setRazonSocial(leerString.nextLine());                                
+                                        System.out.print("        Introduce la nueva direccion fiscal: ");                                
+                                        Provedor1.setDireccionFiscal(leerString.nextLine());                                
+                                        System.out.print("        Introduce el nuevo RFC: ");                                      
+                                        Provedor1.setRfc(leerString.nextLine());                                
+                                        System.out.println("        Introduce la nueva informacion sobre las cadenas:");
+                                        System.out.println("        ");
+                                        Provedor1.setCadenas(leerString.nextLine());
+                                        System.out.println("+--------------------------------------------------------------------------------+");
+                                        break;
+                                    }
+                                    case 2:{
+                                        System.out.println("+--------------------------------------------------------------------------------+");
+                                        System.out.println("    Datos de  Provedor 2 de Sucursal: " + Pachuca_Norte.getNombre());                                    
+                                        System.out.println("|--------------------------------------------------------------------------------|"); 
+					System.out.print("        Introduce la nueva razon social: ");                                
+                                	Provedor2.setRazonSocial(leerString.nextLine());                                
+	                                System.out.print("        Introduce la nueva direccion fiscal: ");                                
+        	                        Provedor2.setDireccionFiscal(leerString.nextLine());                                
+                	                System.out.print("        Introduce el nuevo RFC: ");                                      
+                        	        Provedor2.setRfc(leerString.nextLine());                                
+                                	System.out.println("        Introduce la nueva informacion sobre las cadenas:");
+	                                System.out.println("        ");
+        	                        Provedor2.setCadenas(leerString.nextLine());
+                	                System.out.println("+--------------------------------------------------------------------------------+");                                        
+                                        break;
+                                    }
+                                    case 3:{
+                                        System.out.println("+--------------------------------------------------------------------------------+");
+                                        System.out.println("    Datos de  Provedor 3 de Sucursal: " + Pachuca_Norte.getNombre());                                    
+                                        System.out.println("|--------------------------------------------------------------------------------|");  
+					System.out.print("        Introduce la nueva razon social: ");                                
+	                                Provedor3.setRazonSocial(leerString.nextLine());                                
+        	                        System.out.print("        Introduce la nueva direccion fiscal: ");                                
+                	                Provedor3.setDireccionFiscal(leerString.nextLine());                                
+                        	        System.out.print("        Introduce el nuevo RFC: ");                                      
+                                	Provedor3.setRfc(leerString.nextLine());                                
+	                                System.out.println("        Introduce la nueva informacion sobre las cadenas:");
+        	                        System.out.println("        ");
+                	                Provedor3.setCadenas(leerString.nextLine());
+                        	        System.out.println("+--------------------------------------------------------------------------------+");                                        
+                                        break;
+                                    }
+                                    case 4:{
+                                        System.out.println("+--------------------------------------------------------------------------------+");
+                                        System.out.println("    SUBMENU ----> Editar Informacion De Los Provedores");
+                                        System.out.println("+--------------------------------------------------------------------------------+");
+                                        break;
+                                    }
+                                    default:{
+                                        System.out.println("+--------------------------------------------------------------------------------+");
+                                        System.out.println("    OPCION INVALIDA D:");                        
+                                        System.out.println("+--------------------------------------------------------------------------------+"); 
+                                    }
+                                }                                
+                                }while(caso != 4);
+                                caso = 0;
                                 break;
                             }
-                            case 2:{
-                                System.out.println("+--------------------------------------------------------------------------------+");                                    
-                                System.out.println("    Datos de  Provedor de Sucursal: " + Pachuca_Centro.getNombre());                                    
-                                System.out.println("|--------------------------------------------------------------------------------|");                                
-                                System.out.print("        Introduce la nueva razon social: ");                                
-                                Provedor3.setRazonSocial(leerString.nextLine());                                
-                                System.out.print("        Introduce la nueva direccion fiscal: ");                                
-                                Provedor3.setDireccionFiscal(leerString.nextLine());                                
-                                System.out.print("        Introduce el nuevo RFC: ");                                      
-                                Provedor3.setRfc(leerString.nextLine());                                
-                                System.out.println("        Introduce la nueva informacion sobre las cadenas:");
-                                System.out.println("        ");
-                                Provedor3.setCadenas(leerString.nextLine());
+                            case 2:{                                
+                                do{
                                 System.out.println("+--------------------------------------------------------------------------------+");
+                                System.out.println("    SUBMENU ----> Editar Informacion De Los Provedores ---> Sucursal: "+ Pachuca_Norte.getNombre());
+                                System.out.println("|--------------------------------------------------------------------------------|");
+                                System.out.println("    (1) Provedor 1");
+                                System.out.println("    (1) Provedor 2");
+                                System.out.println("    (1) Provedor 3");
+                                System.out.println("|--------------------------------------------------------------------------------|");
+                                System.out.println("    ELIGE UNA OPCION");
+                                System.out.println("+--------------------------------------------------------------------------------+");
+                                
+                                caso = leerInt.nextInt();
+                                
+                                switch(caso){
+                                    case 1:{
+                                        System.out.println("+--------------------------------------------------------------------------------+");
+                                        System.out.println("    Datos de  Provedor 1 de Sucursal: " + Pachuca_Norte.getNombre());                                    
+                                        System.out.println("|--------------------------------------------------------------------------------|");                                
+                                        System.out.print("        Introduce la nueva razon social: ");                                
+                                        Provedor1.setRazonSocial(leerString.nextLine());                                
+                                        System.out.print("        Introduce la nueva direccion fiscal: ");                                
+                                        Provedor1.setDireccionFiscal(leerString.nextLine());                                
+                                        System.out.print("        Introduce el nuevo RFC: ");                                      
+                                        Provedor1.setRfc(leerString.nextLine());                                
+                                        System.out.println("        Introduce la nueva informacion sobre las cadenas:");
+                                        System.out.println("        ");
+                                        Provedor1.setCadenas(leerString.nextLine());
+                                        System.out.println("+--------------------------------------------------------------------------------+");
+                                        break;
+                                    }
+                                    case 2:{
+                                        System.out.println("+--------------------------------------------------------------------------------+");
+                                        System.out.println("    Datos de  Provedor 2 de Sucursal: " + Pachuca_Norte.getNombre());                                    
+                                        System.out.println("|--------------------------------------------------------------------------------|"); 
+					System.out.print("        Introduce la nueva razon social: ");                                
+                                	Provedor2.setRazonSocial(leerString.nextLine());                                
+	                                System.out.print("        Introduce la nueva direccion fiscal: ");                                
+        	                        Provedor2.setDireccionFiscal(leerString.nextLine());                                
+                	                System.out.print("        Introduce el nuevo RFC: ");                                      
+                        	        Provedor2.setRfc(leerString.nextLine());                                
+                                	System.out.println("        Introduce la nueva informacion sobre las cadenas:");
+	                                System.out.println("        ");
+        	                        Provedor2.setCadenas(leerString.nextLine());
+                	                System.out.println("+--------------------------------------------------------------------------------+");                                        
+                                        break;
+                                    }
+                                    case 3:{
+                                        System.out.println("+--------------------------------------------------------------------------------+");
+                                        System.out.println("    Datos de  Provedor 3 de Sucursal: " + Pachuca_Norte.getNombre());                                    
+                                        System.out.println("|--------------------------------------------------------------------------------|");  
+					System.out.print("        Introduce la nueva razon social: ");                                
+	                                Provedor3.setRazonSocial(leerString.nextLine());                                
+        	                        System.out.print("        Introduce la nueva direccion fiscal: ");                                
+                	                Provedor3.setDireccionFiscal(leerString.nextLine());                                
+                        	        System.out.print("        Introduce el nuevo RFC: ");                                      
+                                	Provedor3.setRfc(leerString.nextLine());                                
+	                                System.out.println("        Introduce la nueva informacion sobre las cadenas:");
+        	                        System.out.println("        ");
+                	                Provedor3.setCadenas(leerString.nextLine());
+                        	        System.out.println("+--------------------------------------------------------------------------------+");                                        
+                                        break;
+                                    }
+                                    case 4:{
+                                        System.out.println("+--------------------------------------------------------------------------------+");
+                                        System.out.println("    SUBMENU ----> Editar Informacion De Los Provedores");
+                                        System.out.println("+--------------------------------------------------------------------------------+");
+                                        break;
+                                    }
+                                    default:{
+                                        System.out.println("+--------------------------------------------------------------------------------+");
+                                        System.out.println("    OPCION INVALIDA D:");                        
+                                        System.out.println("+--------------------------------------------------------------------------------+"); 
+                                    }
+                                }                                
+                                }while(caso != 4);
+                                caso = 0;                                
                                 break;
                             }
                             case 3:{
-                                System.out.println("+--------------------------------------------------------------------------------+");                                    
-                                System.out.println("    Datos de  Provedor de Sucursal: " + Pachuca_Sur.getNombre());                                    
-                                System.out.println("|--------------------------------------------------------------------------------|");                                
-                                System.out.print("        Introduce la nueva razon social: ");                                
-                                Provedor2.setRazonSocial(leerString.nextLine());                                
-                                System.out.print("        Introduce la nueva direccion fiscal: ");                                
-                                Provedor2.setDireccionFiscal(leerString.nextLine());                                
-                                System.out.print("        Introduce el nuevo RFC: ");                                      
-                                Provedor2.setRfc(leerString.nextLine());                                
-                                System.out.println("        Introduce la nueva informacion sobre las cadenas:");
-                                System.out.println("        ");
-                                Provedor2.setCadenas(leerString.nextLine());
+                                do{
                                 System.out.println("+--------------------------------------------------------------------------------+");
+                                System.out.println("    SUBMENU ----> Editar Informacion De Los Provedores ---> Sucursal: "+ Pachuca_Norte.getNombre());
+                                System.out.println("|--------------------------------------------------------------------------------|");
+                                System.out.println("    (1) Provedor 1");
+                                System.out.println("    (1) Provedor 2");
+                                System.out.println("    (1) Provedor 3");
+                                System.out.println("|--------------------------------------------------------------------------------|");
+                                System.out.println("    ELIGE UNA OPCION");
+                                System.out.println("+--------------------------------------------------------------------------------+");
+                                
+                                caso = leerInt.nextInt();
+                                
+                                switch(caso){
+                                    case 1:{
+                                        System.out.println("+--------------------------------------------------------------------------------+");
+                                        System.out.println("    Datos de  Provedor 1 de Sucursal: " + Pachuca_Norte.getNombre());                                    
+                                        System.out.println("|--------------------------------------------------------------------------------|");                                
+                                        System.out.print("        Introduce la nueva razon social: ");                                
+                                        Provedor1.setRazonSocial(leerString.nextLine());                                
+                                        System.out.print("        Introduce la nueva direccion fiscal: ");                                
+                                        Provedor1.setDireccionFiscal(leerString.nextLine());                                
+                                        System.out.print("        Introduce el nuevo RFC: ");                                      
+                                        Provedor1.setRfc(leerString.nextLine());                                
+                                        System.out.println("        Introduce la nueva informacion sobre las cadenas:");
+                                        System.out.println("        ");
+                                        Provedor1.setCadenas(leerString.nextLine());
+                                        System.out.println("+--------------------------------------------------------------------------------+");
+                                        break;
+                                    }
+                                    case 2:{
+                                        System.out.println("+--------------------------------------------------------------------------------+");
+                                        System.out.println("    Datos de  Provedor 2 de Sucursal: " + Pachuca_Norte.getNombre());                                    
+                                        System.out.println("|--------------------------------------------------------------------------------|"); 
+					System.out.print("        Introduce la nueva razon social: ");                                
+                                	Provedor2.setRazonSocial(leerString.nextLine());                                
+	                                System.out.print("        Introduce la nueva direccion fiscal: ");                                
+        	                        Provedor2.setDireccionFiscal(leerString.nextLine());                                
+                	                System.out.print("        Introduce el nuevo RFC: ");                                      
+                        	        Provedor2.setRfc(leerString.nextLine());                                
+                                	System.out.println("        Introduce la nueva informacion sobre las cadenas:");
+	                                System.out.println("        ");
+        	                        Provedor2.setCadenas(leerString.nextLine());
+                	                System.out.println("+--------------------------------------------------------------------------------+");                                        
+                                        break;
+                                    }
+                                    case 3:{
+                                        System.out.println("+--------------------------------------------------------------------------------+");
+                                        System.out.println("    Datos de  Provedor 3 de Sucursal: " + Pachuca_Norte.getNombre());                                    
+                                        System.out.println("|--------------------------------------------------------------------------------|");  
+					System.out.print("        Introduce la nueva razon social: ");                                
+	                                Provedor3.setRazonSocial(leerString.nextLine());                                
+        	                        System.out.print("        Introduce la nueva direccion fiscal: ");                                
+                	                Provedor3.setDireccionFiscal(leerString.nextLine());                                
+                        	        System.out.print("        Introduce el nuevo RFC: ");                                      
+                                	Provedor3.setRfc(leerString.nextLine());                                
+	                                System.out.println("        Introduce la nueva informacion sobre las cadenas:");
+        	                        System.out.println("        ");
+                	                Provedor3.setCadenas(leerString.nextLine());
+                        	        System.out.println("+--------------------------------------------------------------------------------+");                                        
+                                        break;
+                                    }
+                                    case 4:{
+                                        System.out.println("+--------------------------------------------------------------------------------+");
+                                        System.out.println("    SUBMENU ----> Editar Informacion De Los Provedores");
+                                        System.out.println("+--------------------------------------------------------------------------------+");
+                                        break;
+                                    }
+                                    default:{
+                                        System.out.println("+--------------------------------------------------------------------------------+");
+                                        System.out.println("    OPCION INVALIDA D:");                        
+                                        System.out.println("+--------------------------------------------------------------------------------+"); 
+                                    }
+                                }                                
+                                }while(caso != 4);
+                                caso = 0;
                                 break;
                             }
                             case 4:{
